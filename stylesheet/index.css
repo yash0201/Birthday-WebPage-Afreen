@@ -154,12 +154,6 @@ div.desc {
     text-align: center;
 }
 
-.photo-gallery{
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-}
-
 #feed{
     margin-top: 10%;
 }
@@ -186,13 +180,17 @@ div.desc {
 }
 
 .photo-gallery{
-    display: flexbox;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 .photo-gallery-img{
-    width: 350px;
-    height: 420px;
+    width: 300px;
+    height: 350px;
     border-color: #777;
+    border-radius: 10px;
+    border-style: solid;
 }
 
 .photo-wide{
