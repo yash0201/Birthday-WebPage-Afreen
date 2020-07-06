@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+.top-navigation{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+}
+
+.nav-wrapper{ 
+    background-color: #FFFFFF;   
+}
+
+.insta-icon{
+    font-size: 2rem;
+}
+
+.instagram{
+    font-size: 2rem;
+    font-family: 'Lobster',cursive;
+    color: #262626;
+}
+
+.search-bar{
+    margin: 0px;
+    margin-left: 170px;
+    height: 31px;
+    width: 220px;
+    border-radius: 5px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+
+.nav-icons{
+    font-size: 1.8rem;
+    color: #262626;
+}
+
+.nav-icons:hover{
+    font-size: 1.7rem;
+    color: #262626;
+    text-decoration: none;
+}
+
+.card{
+    height: 850px;
+    width: 615px;
+}
+
+.card-img{
+    height: 612px;
+}
+
+.page-img{
+    float: left;
+    margin-left: 5px;
+    border-radius: 40px;  
+}
+
+.page-name{
+    margin: 0;
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    float: left;
+    margin-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.card-title-heading{
+    text-align: left;
+    margin: 0;
+    margin-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.card-title{
+    text-align: left;
+    margin: 0;
+}
+
+.card-text{
+    text-align: left;
+}
+
+.minutes{
+    font-size: 10px;
+    text-align: left;
+}
+
+.comment{
+    border: 1px solid black;
+    text-decoration: none;
+    border-style: none;
+    background: none;
+    height: 3rem;
+    width: 40rem;
+    outline: none;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.comment-section{
+    background-color: #FFFFFF;
+    height: 58px;
+    width: 615px;
+    margin: 0;
+    margin-left: 0px;
+    height: 3rem;
+    border: 1px solid #E6E6E6;
+}
+
+.card-div{
+    margin: 0;
+    margin-top: 61px;
+}
+
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+.quiz{
+    margin-top: 10%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.photo-gallery{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+#feed{
+    margin-top: 10%;
+}
+
+.feed-8{
+    height: 1100px;
+    width: 615px;
+}
+
+.quiz-textbox{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.quiz-submit{
+    border-radius: 10%;
+    font-weight: 500;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: black;
+    border-color: #262626;
+}
+
+.photo-gallery{
+    display: flexbox;
+}
+
+.photo-gallery-img{
+    width: 350px;
+    height: 420px;
+    border-color: #777;
+}
+
+.photo-wide{
+    width: 100%;
+    height: auto;
+}
+
+.photo-quiz-img{
+    width: 700px;
+    height: 700px;
+    margin: 30px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #262626;
+    border-radius: 10px;
+}
+
+video{
+    height: 40%;
+    width: auto;
+}
+
+.quiz-submit{
+    display: block;
+    padding: 20px;
+    margin: 25px;
+}
