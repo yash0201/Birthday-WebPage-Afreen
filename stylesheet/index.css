@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-
-.photo-wide{
-    width: 100%;
-}
-
 body{
     background-color: #FAFAFA;
 }
@@ -223,4 +218,9 @@ video{
     display: block;
     padding: 20px;
     margin: 25px;
+}
+
+
+.photo-wide{
+    width: 100%;
 }
