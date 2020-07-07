@@ -196,7 +196,7 @@ div.desc {
 
 .photo-gallery-heading{
     width: 87%;
-    height: 250px;
+    height: 240px;
 }
 
 .photo-quiz-img{
@@ -209,6 +209,10 @@ div.desc {
     border-radius: 10px;
 }
 
+.photo-wide{
+    width: 100%;
+}
+
 video{
     height: 40%;
     width: auto;
@@ -218,9 +222,4 @@ video{
     display: block;
     padding: 20px;
     margin: 25px;
-}
-
-
-.photo-wide{
-    width: 100%;
 }
