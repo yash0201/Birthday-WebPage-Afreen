@@ -194,10 +194,11 @@ div.desc {
     border-style: solid;
 }
 
-.photo-wide{
+.photo-gallery-heading{
     width: 100%;
-    height: auto;
+    height: 320px;
 }
+
 
 .photo-quiz-img{
     width: 700px;
