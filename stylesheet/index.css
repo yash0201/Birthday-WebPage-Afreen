@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+
+.photo-wide{
+    width: 100%;
+}
+
 body{
     background-color: #FAFAFA;
 }
