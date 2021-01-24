@@ -2,1462 +2,328 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/48538196e7.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="stylesheet/index.css">
-    <link rel="stylesheet" href="stylesheet/quiz.css">
-    <link rel="stylesheet" href="stylesheet/sidemenu.css">
-    <link rel="stylesheet" href="stylesheet/notifications.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>Instagram</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="stylesheet\index.css">
+  <link rel="stylesheet" href="stylesheet\button.css">
+  <link rel="stylesheet" href="stylesheet\bulbs.css">
+  <link rel="stylesheet" href="stylesheet\balloons.css">
+  <link rel="stylesheet" href="stylesheet\slideshow.css">
+  <link rel="stylesheet" href="stylesheet\envelope.css">
+
+  <title>Invitation</title>
 </head>
 
-<body>
+<body id="body-init">
 
+  <div id="start-btns-div">
+    <a href="#" id="start-btn" onclick="showHome()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      TURN ON LIGHTS
+    </a>
+  </div>
 
-    <div class="container">
+  <!-- ########## AUDIO ########## -->
+
+  <audio id="background-audio" controls loop>
+    <source src="audio\audio.mp3">
+    </source>
+  </audio>
+
+  <!-- ########## AUDIO END ########## -->
+
+  <!-- ########## BULBS ########## -->
+
+  <div id="bulbs-off" class="bulb-container display-none">
+    <div id="blue-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images/bulb.png">
+    </div>
+    <div id="green-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images/bulb.png">
+    </div>
+    <div id="orange-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images/bulb.png">
+    </div>
+    <div id="pink-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images/bulb.png">
+    </div>
+    <div id="red-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images//bulb.png">
+    </div>
+    <div id="yellow-bulb-off" class="bulbs display-none">
+      <img class="bulb-off" src="images//bulb.png">
+    </div>
+  </div>
+
+  <div id="bulbs-on" class="bulb-container display-none">
+    <div id="blue-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images/bulb_blue.png">
+    </div>
+    <div id="green-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images/bulb_green.png">
+    </div>
+    <div id="orange-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images/bulb_orange.png">
+    </div>
+    <div id="pink-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images/bulb_pink.png">
+    </div>
+    <div id="red-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images//bulb_red.png">
+    </div>
+    <div id="yellow-bulb-on" class="bulbs display-none">
+      <img class="bulb-on" src="images//bulb_yellow.png">
+    </div>
+  </div>
+
+  <!-- ########## BULBS END ########## -->
+  <div>
+    <!-- ########## BALLOONS ########## -->
+
+    <div id="balloons" class="balloon-panel display-none">
+
+      <!-- BALLOON 1 - -5% -->
+
+      <div class="balloon">
+        <img src="images\b5.png">
+      </div>
+
+      <!-- BALLOON 2 - 5% -->
+
+      <div class="balloon">
+        <img src="images\b4.png">
+      </div>
+
+      <!-- BALLOON 3 - 10% -->
+
+      <div class="balloon">
+        <img src="images\b1.png">
+      </div>
+
+      <!-- BALLOON 4 - 15% -->
+
+      <div class="balloon">
+        <img src="images\b3.png">
+      </div>
+
+      <!-- BALLOON 5 - 20% -->
+
+      <div class="balloon">
+        <img src="images\b5.png">
+      </div>
+
+      <!-- BALLOON 6 - 25% -->
+
+      <div class="balloon">
+        <img src="images\b2.png">
+      </div>
+
+      <!-- BALLOON 7 - 30% -->
+
+      <div class="balloon">
+        <img src="images\b4.png">
+      </div>
+
+      <!-- BALLOON 8 - 35% -->
+
+      <div class="balloon">
+        <img src="images\b7.png">
+      </div>
+
+      <!-- BALLOON 9 - 40% -->
+
+      <div class="balloon">
+        <img src="images\b6.png">
+      </div>
+
+      <!-- BALLOON 10 - 45% -->
+
+      <div class="balloon">
+        <img src="images\b3.png">
+      </div>
+
+      <!-- BALLOON 11 - 50% -->
+
+      <div class="balloon">
+        <img src="images\b2.png">
+      </div>
+
+      <!-- BALLOON 12 - 55% -->
+
+      <div class="balloon">
+        <img src="images\b1.png">
+      </div>
+
+      <!-- BALLOON 13 - 60% -->
+
+      <div class="balloon">
+        <img src="images\b7.png">
+      </div>
+
+      <!-- BALLOON 14 - 65% -->
+
+      <div class="balloon">
+        <img src="images\b5.png">
+      </div>
+
+      <!-- BALLOON 15 - 70% -->
+
+      <div class="balloon">
+        <img src="images\b6.png">
+      </div>
+
+      <!-- BALLOON 16 - 75% -->
+
+      <div class="balloon">
+        <img src="images\b4.png">
+      </div>
+
+      <!-- BALLOON 17 - 80% -->
+
+      <div class="balloon">
+        <img src="images\b3.png">
+      </div>
+
+      <!-- BALLOON 18 - 85% -->
+
+      <div class="balloon">
+        <img src="images\b7.png">
+      </div>
+
+      <!-- BALLOON 19 - 90% -->
+
+      <div class="balloon">
+        <img src="images\b1.png">
+      </div>
+
+      <!-- BALLOON 20 - 95% -->
+
+      <div class="balloon">
+        <img src="images\b7.png">
+      </div>
 
     </div>
 
-    <!------------ NAVIGATION BAR ------------>
+    <!-- ########## BALLOONS END ########## -->
 
-    <div class="top-navigation" id="navigation-bar">
-        <div class="nav-wrapper">
+    <!-- ########## 3D SLIDE SHOW ########## -->
 
-            <div class="container">
-
-                <nav class="navbar navbar-expand-lg navbar-light">
-
-                    <a onclick="showHome()"><i class="fab fa-instagram insta-icon"></i></a>
-                    <!-- <a><i class="fas fa-grip-lines-vertical"></i></a> -->
-                    <a class="navbar-brand instagram" href="#" onclick="showHome()">&nbsp; Instagram</a>
-
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search"
-                                    aria-label="Search">
-                            </li>
-
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <a href="#" class="nav-link nav-icons"><i class="fab fa-telegram-plane"></i></a>
-                            <a href="#" class="nav-link nav-icons" onclick="showQuiz()"><i
-                                    class="far fa-compass"></i></a>
-                            <a href="#" class="nav-link nav-icons"><i class="far fa-heart"></i></a>
-                            <a href="#" class="nav-link nav-icons" onclick="showPhotoGallery()"><i
-                                    class="fas fa-user"></i></a>
-                        </form>
-                    </div>
-                </nav>
-
-            </div>
+    <div id="photo-slideshow" class="display-none">
+      <section class="slideshow">
+        <div class="content">
+          <div class="content-carrousel">
+            <figure class="shadow"><img src="images\slideshow_image1.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image2.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image3.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image4.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image5.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image6.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image7.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image8.jpeg"></figure>
+            <figure class="shadow"><img src="images\slideshow_image9.jpeg"></figure>
+          </div>
         </div>
-
+      </section>
     </div>
 
-    <!------------ NAVIGATION BAR END ------------>
+    <!-- ########## 3D SLIDE SHOW END ########## -->
 
-    <!------------ NOTIFICATION BAR ------------>
+    <!-- Venue -->
 
-    <section id="notification-bar">
-
-        <div>
-            <div class="notificationss notification-notification">
-                <div class="notifications__top my-2 mb-4">
-                    <center><h3 class="heading-primary notifications__heading">Notifications</h3></center>
-                </div>
-
-                <div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">taylorswift accepted your follow request
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">ttt_official mentioned you in a comment:
-                                    @not.so.beautiful_ You're one of the most promising writers of your generation. We
-                                    beg you to please let us feature some of your work on our page and oblige.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">You liked 352839 posts tagged #insta_cheese today
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 mb-3" style="width: 100%; height: auto;">
-                        <center>
-                            <h5>
-                                This week
-                            </h5>
-                        </center>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Stevecarell comented on your post: That's
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Stevecarell comented on your post: What
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Stevecarell comented on your post: She
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Stevecarell comented on your post: Said
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Stevecarell comented on your post: 😂🤪😎
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">You liked 484625 posts tagged
-                                    #east_or_west_Royal_College_is_d_best🖤 this week
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">pennbadgley has accepted your follow request
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 mb-3" style="width: 100%; height: auto;">
-                        <center>
-                            <h5>
-                                This month
-                            </h5>
-                        </center>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">
-                                    You liked 10273636 posts tagged #cats_of_instagram this month
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="card my-3" style="width: 100%; height: auto;">
-                            <!-- <img src="..." class="card-img-top" alt="..."> -->
-                            <div class="card-body">
-                                <p class="card-text">joelotruglio liked your comment :
-                                    I don't want to hang out with some stupid baby who's never met Jake
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!------------ NOTIFICATION BAR END ------------>
-
-    <!------------ MESSAGE BAR ------------>
-
-    <section id="message-bar">
-
-        <div>
-            <div class="notifications notification-messages">
-                <div class="notifications__top my-2">
-                    <h3 class="heading-primary notifications__heading">Messages</h3>
-                    <!-- <h3 class="heading-tertiary "><a href="#" class="notifications__seeall">See All</a> </h3> -->
-                </div>
-                <div class="mt-4">
-                    <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_kavita">
-                        <img src="images/kavita_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text">
-                            <h5 class="notifications__user-name" >kavita_14_</h5>
-                            <h4 class="notifications__chat-text" >Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_samiksha">
-                        <img src="images/samiksha_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text" onclick="message_samiksha">
-                            <h5 class="notifications__user-name">m_samiksha27</h5>
-                            <h4 class="notifications__chat-text">Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_kartish">
-                        <img src="images/kartish_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text" onclick="message_kartish">
-                            <h5 class="notifications__user-name">kartishchanchan</h5>
-                            <h4 class="notifications__chat-text">Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_rhishabh">
-                        <img src="images/rhishabh_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text" onclick="message_rhishabh">
-                            <h5 class="notifications__user-name">._rhishabhn_</h5>
-                            <h4 class="notifications__chat-text">Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_kena">
-                        <img src="images/kena_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text" onclick="message_kena">
-                            <h5 class="notifications__user-name">kena_prajapat</h5>
-                            <h4 class="notifications__chat-text">Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="notifications__user"><a href="#" class="notifications__link" data-toggle="modal" data-target="#message_saurabh">
-                        <img src="images/saurabh_insta_dp.jpg" alt="User" class="notifications__user-photo">
-                        <div class="notifications__text" onclick="message_saurabh">
-                            <h5 class="notifications__user-name">._savy8900_</h5>
-                            <h4 class="notifications__chat-text">Sent you a message...</h4>
-                        </div>
-                    </a>
-                </div>
-                </div>
-                
-            </div>
-        </div>
-
-    </section>
-
-    <!------------ MESSAGE BAR END ------------>
-
-    <!------------ SIDE MENU ------------>
-
-    <!-- <aside>
-        <div id="side-menu" class="sidebar">
-            <div id="toggle-button" class="toggle-btn" onclick="toggleSideBar()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul>
-                <li class="sidebar-title">MENU</li>
-                <li class="options" onclick="showHome()">Home</li>
-                <li class="options" onclick="showMemories()">Memories</li>
-                <li class="options" onclick="showQuizes()">Quizes</li>
-
-            </ul>
-        </div>
-    </aside> -->
-
-    <!------------ SIDE MENU END ------------>
-
-    
-
-    <!----------- MODEL - KAVITA ----------->
-
-    <div class="modal fade" id="message_kavita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Kavita</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    I can write a thousand pages but I'd still be unable to capture your essence.. in all it's glory! 
-Karu bhi kaise yaar, the number of mood swings and phases and emotional personalities you have, oh boy!
-I've known the timid, anxious and hesitant afreen;
-I've come to adore the beautiful, smart and the nervous wreck of a person afreen;
-I've fallen in love with the insanely talented, charming and a badass queen afreen;
-I've also learnt from the quiet, observant and loving afreen;
-I've laughed with the twinkle in her eye afreen
-I've danced with the gorgeous turn the damn beat up afreen
-I've sang with the -screaming-at-the-top-of-our-lungs-coz-we-fucking-love-it afreen
-I've shopped with the ever excited, we're totally gonna rock this outfit afreen
-But above all, I'm beyond thrilled to be friends with my other half of a cheeseblock afreen and the rachel to my monica afreen!
-Trust me I could go on and on with this but I'll let you go back to enjoying your birthday now... 
-
-Happy birthday again....!!! And have an extra slice of cake mere taraf se.. bye bye!!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - KAVITA ----------->
-
-    <!----------- MODEL - SAMIKSHA ----------->
-
-    <div class="modal fade" id="message_samiksha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Samiksha</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Happy birthday to the cartoon I know
-You have so many stupid gestures to show
-Ok, don't get bugged
-I was kidding my dear
-Coz it's your birthday so spread some cheers
-Wishing you happiness to welcome each morning, wishing you laughter to make your heart sing, wishing you friendship sharing nd caring and all the joy the birthday can bring
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - SAMIKSHA ----------->
-
-    <!----------- MODEL - KARTISH ----------->
-
-    <div class="modal fade" id="message_kartish" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Kartish</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    The day u own in this year is here ..... So gift or present what ever you take  all I wish for is you to have beautiful memories of today. May your writing grow forever  so that  everyone can admire you. I wish you get all the happiness and all your dreams get true !!
-Kuch shabdh hindi me:
-Apki zindagi apke naam ki tarah hi afreen rahe aur apke kuch haseen pal me hum apke sath rahe bas  yahi hai hamari  kamna kyuki hindi itni hi thik thi hamari .. It is great to have a friend like you  because you know the meaning of friendship and i will always support you what ever you do. I wish you  a Very Very Happy Birthday Afreen and have a great  year ahead
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - KARTISH ----------->
-
-    <!----------- MODEL - RHISHABH ----------->
-
-    <div class="modal fade" id="message_rhishabh" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Rhishabh</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Hey
-Wish you a very happy birthday! 
-May you get all the happiness in your life and things that you aspired and aspire to be. 
-Life, things and us might have changed but what's says is memories down our memory lane. Some good many bad, yeah at times I regret but let's not talk either today being it your special day. 
-Wish you a very happy birthday again!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - RHISHABH ----------->
-
-    <!----------- MODEL - KENA ----------->
-
-    <div class="modal fade" id="message_kena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Kena</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Many people have walk in and out of my life, but only few leave footprints in my heart and you are one of them. MANY MANY HAPPY RETURNS OF THE DAY❤️
- May all your wishes come true
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - KENA ----------->
-
-    <!----------- MODEL - SAURABH ----------->
-
-    <div class="modal fade" id="message_saurabh" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Saurabh</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Aieee biduuuu 
-soo finally agaya apne bhai ka birthright, apna angrezi bole toh tera marathi😂😂 phir bhi apun abhi angreezi mai krega wish bolo toh full on enghlish me soo bhai hasna mat hmm.
-
-to the one who is full of dreams 
-to the one who likes her chocolate icecreams
-to the one who loves to ride her creative horses
-to the one who loves to write whats on her mind 
-to the one who loves to be loved as weirdo 
-to the one who loves ONLY weirdos
-to the one who loves to portray love in different ways
-to the one who inspire people with her simple ways 
-and lastly to the one who dreams to be a storyteller 
-happy bday u weirdo,biduu..
-from the one who is waiting to get your own book  signed by you one day.......
-
-bass jitna aata tah bidu sabh gadhi krke apan mai daal diya hai toh abhi chaku chalane ka aur cake katneka and khane ka bolet toh maaza noo bday ♥️♥️😂😂😂😂
-
-happy bday dumbass😂😂😂😎🤘
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!----------- MODEL END - SAURABH ----------->
-
-
-    <div id="login-page" class="login-page">
-        <div class="container" style="background-color: red;">
-
-            <center>
-                <div>
-
-                    <div>
-    
-                    </div>
-    
-                </div>
-            </center>
-
-            
-
-        </div>
-    </div>
-
-
-
-    <!------------ MAIN CONTENT ------------>
-
-    <div class="container content" id="main-content">
-
+    <div class="message mx-3 mt-2 p-4 display-none"
+      style="position: absolute; top: 38%; font-weight: 600; font-size: 1.19rem; text-align: center; font-family: 'Courgette', cursive; color: rgb(5, 3, 124)">
+      <p>We are conducting a get together for Mummy & Papa. You are invited for this celebration.</p>
+      <p>Please do come. Your presence would really be appreciated.</p>
+      <p>~ From Bharat and Hitesh</p>
+      <div style="border: 3px solid rgb(124, 2, 2);" class="p-2">
+        <h4><b style="color: rgb(17, 17, 94); font-size: 1.15rem;">Timeing :</b> 4:30 pm - 9:30 pm</h4>
+        <h4><b style="color: rgb(17, 17, 94);">Venue :</b> 1st Floor,
+          Mini Party Hall,
+          Sector 7 (Corner), Opp. Swami
+          Narayan Mandir,
+          Shantinagar,
+          Mira Road (E)</h4>
+      </div>
+      <footer style="font-family:'Times New Roman', Times, serif; font-size: 1.02rem;" class="mt-3 p-0">
         <center>
-            <div id="feed" class="feed">
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed1.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text likes">197 likes</p>
-                            <p class="card-text"></p>
-
-                            <p class="minutes">20 MINUTES AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed2.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text likes">348 likes</p>
-                            <p class="card-text">_not.afreen_ My cake is my cake.. none of your cake! </p>
-
-                            <p class="minutes">2 HOURS AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed3.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text">509 likes</p>
-                            <p class="card-text">_not.afreen_ #Costing was my favourite subject...I was able to pen some
-                                of my best pieces without distractions in his class.. thank you bhavesh sir!!!</p>
-
-                            <p class="minutes">5 HOURS AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed4.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text likes">673 likes</p>
-                            <p class="card-text"> _not.afreen_ Aree book value.. admission.. are market value..
-                                dissolution! </p>
-
-                            <p class="minutes">10 HOURS AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed5.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text likes">997 likes</p>
-                            <p class="card-text"> _not.afreen_ Shakal chhupa leti hu aur black and white filter add kar
-                                deti hu.. cool lagega 😎😏 </p>
-
-                            <p class="minutes">12 HOURS AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed6.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text">1034 likes</p>
-                            <p class="card-text likes"> _not.afreen_ Bachu... jhund me to suar aate hai🐖🐖🐖.. Sher
-                                hamesha akela aata hai 🐅! </p>
-
-                            <p class="minutes">2 DAYS AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed7.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text">2.5K likes</p>
-                            <p class="card-text"> _not.afreen_ Mai husn pari mai janejahan... Mai sabse haseen mai sabse
-                                jawaan! </p>
-
-                            <p class="minutes">1 MONTH AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-                <div class="card-div">
-
-                    <div class="card feed-8">
-
-                        <h5 class="card-title card-title-heading">
-
-                            <img src="images/afreen_insta_dp.jpg" alt="..." height="55px" width="55px" class="page-img">
-                            <a href="#" class="page-name ml-2 pl-2" onclick="showPhotoGallery()">_not.afreen_</a>
-
-                        </h5>
-
-                        <img src="images/feed8.jpg" class="card-img-top card-img" alt="...">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="far fa-heart"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-share-square"></i>
-                            </h5>
-
-                            <p class="card-text likes">2.7K likes</p>
-                            <p class="card-text"> _not.afreen_ And finally the last picture of the trail which throws
-                                back to the timeline on 6th July 2018!
-                                The first every birthday party of our group, the first ever outing of our group, the day
-                                that was full of chaos, the day time literally flew by while we doubled up in laughter
-                                and soaked up the magic of simply being with our friends... we didn't give a fuck about
-                                what we did or talked (probably didn't even understand most of it) about!
-                                The day when we went crazy with no disclaimer of it.
-                                We all wish you a very happy birthday!!! wish you lots of happiness and a great journey
-                                ahead!
-                                Looking back to that great day and hopefully.. many more to come up ahead!
-
-                                Ps - With your birthday we also celebrate 2 years of togetherness of this unexpected but
-                                wonderful group that we now have and love!! ❤️ </p>
-
-                            <p class="minutes">1 MONTH AGO</p>
-
-                        </div>
-                    </div>
-
-                    <div class="comment-section">
-                        <input type="text" class="comment" placeholder="     Add a comment... ">
-                    </div>
-
-                </div>
-
-            </div>
-
+          Designed By Yash Jobalia - 9769264884
         </center>
-
-        <div id="quiz" class="quiz">
-            <br>
-            <div id="quiz-title">
-                <center>
-                    <h2>
-                        Quiz
-                    </h2>
-                </center>
-            </div>
-
-            <div id="quiz-1" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            You've dragged me into clicking tons of photos, made me fall in love with Taylor swift,
-                            introduced me to the world of poetry, binged on free pizzas and mean girls with me and made
-                            delicious nutella pancakes with me. We call each other bitches, but what do other bitches
-                            call me?
-                        </h4>
-                    </center>
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box1" placeholder="Enter your answer" class="quiz-textbox" />
-                    </center>   
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz1" onclick="checkQuiz(1)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-        
-            </div>
-
-            <center>
-
-                <div id="post-quiz-1" class="mt-5">
-                    <img src="images/kavita_quiz1.jpg" class="photo-quiz-img">
-                    <img src="images/kavita_quiz2.jpg" class="photo-quiz-img">
-
-                    <input type="button" id="post-btn-quiz1" onclick="showQuizes(2)" value="Submit" class="quiz-submit"/>
-                </div>
-           
-            </center>
- 
-            <div id="quiz-2" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            Things which are common between us we are jksc students😂, we like marvel movie ,like dc,
-                            the office is great , Michael Scott is best in it, cod(call of duty) is great but still not
-                            played a game together who are we ??? last hint we are cool hot cold freeze what ever u like
-                            😂😂
-                        </h4>
-                    </center>
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box2" placeholder="Enter your answer" class="quiz-textbox" />
-                    </center>              
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz2" onclick="checkQuiz(2)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-            </div>
-
-            <center>
-
-                <div id="post-quiz-2" class="mt-5">
-                    <img src="images/kartish_quiz1.jpg" class="photo-quiz-img">
-                    <img src="images/kartish_quiz2.jpg" class="photo-quiz-img">
-
-                    <input type="button" id="post-btn-quiz2" onclick="showQuizes(3)" value="Submit" class="quiz-submit"/>
-                </div>
-
-            </center>
-
-            <div id="quiz-3" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            Kuch tha nai apne bich khas
-                            Fir b nibhaya rishta jese ho bada hi khass
-                            Karte nai the roj baat
-                            Fir b aati rhi Cls k baad Teri yaad
-                            Rehti hu humesha shant Par hasti Kitna hu yaar
-                            Bhale hi milte na ho hum roj par bdays me humesha sath..
-                        </h4>
-                    </center>
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box3" placeholder="Enter your answer" class="quiz-textbox" />
-                    </center>
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz3" onclick="checkQuiz(3)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-
-            </div>
-
-            <center>
-
-                <div id="post-quiz-3" class="mt-5">
-                    <img src="images/samiksha_quiz1.jpg" class="photo-quiz-img">
-
-                    <input type="button" id="post-btn-quiz3" onclick="showQuizes(4)" value="Submit" class="quiz-submit"/>
-                </div>
-
-            </center>
-
-            <div id="quiz-4" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            I so very generously gave you 101 topics to rant about. Who am I?
-                        </h4>
-                    </center>
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box4" placeholder="Enter your answer" class="quiz-textbox" />
-                    </center>
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz4" onclick="checkQuiz(4)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-                
-            </div>
-
-            <center>
-
-            <div id="post-quiz-4" class="mt-5">
-                <img src="images/rhishabh_quiz1.jpg" class="photo-quiz-img">
-                <img src="images/rhishabh_quiz2.jpg" class="photo-quiz-img">
-
-                <input type="button" id="post-btn-quiz4" onclick="showQuizes(5)" value="Submit" class="quiz-submit"/>
-            </div>
-
-            </center>
-
-            <div id="quiz-5" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            4 saal pehle jab dekha tha tab laga tha bohot attitude hai, par jab baat karna suru kia tab
-                            pata chala ki meri soch galat thi,
-                            Pehchan kaun hu mai ?
-                        </h4>
-                    </center>                   
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box5" placeholder="Enter your answer" class="quiz-textbox" />
-                    </center>
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz5" onclick="checkQuiz(5)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-
-            </div>
-
-            <center>
-
-            <div id="post-quiz-5" class="mt-5">
-                <img src="images/kena_quiz1.jpg" class="photo-quiz-img">
-
-                <input type="button" id="post-btn-quiz5" onclick="showQuizes(6)" value="Submit" class="quiz-submit"/>
-            </div>
-
-            </center>
-
-            <div id="quiz-6" class="mt-3">
-
-                <div class="mt-4 offset-md-2 col-md-8">
-                    <center>
-                        <h4>
-                            The one who struggle between finding the right size of sackbag to put your stupid cats in
-                            them and a synonym of an electric loop and just love to see his mentor to become a great
-                            storyteller one day
-                            Who am I?
-                        </h4>
-                    </center>
-                </div>
-
-                <div class="mt-5">
-                    <center>
-                        <input type="text" id="quiz_text-box6" placeholder="Enter your answer" class="quiz-textbox"/>
-                    </center>
-                </div>
-
-                <div class="mt-4">
-                    <center>
-                        <input type="button" id="btn-quiz6" onclick="checkQuiz(6)" value="Submit" class="quiz-submit"/>
-                    </center>
-                </div>
-
-            </div>
-
-            <center>
-
-                <div id="post-quiz-6" class="mt-5">
-                    <img src="images/saurabh_quiz1.jpg" class="photo-quiz-img">
-                    <img src="images/saurabh_quiz2.jpg" class="photo-quiz-img">
-                    <img src="images/saurabh_quiz3.jpg" class="photo-quiz-img">
-
-                    <input type="button" id="post-btn-quiz6" onclick="showHome()" value="Submit" class="quiz-submit"/>
-                </div>
-
-            </center>
-
-        </div>
-
-        <div id="photo-gallery">
-
-            <div class="photo-gallery offset-md-2 col-md-8 mt-5">
-
-                <div class="photos">
-                    <img src="images/afreen_insta_profile.JPG" class="photo-gallery-heading m-5 p-1">
-                    <img src="images/photo-gallery1.jpg" class="photo-gallery-img m-2 p-1 photo-wide">
-                    <img src="images/photo-gallery2.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery3.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery4.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery5.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery6.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery7.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery8.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery9.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery10.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery11.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery12.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery13.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery14.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery15.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery16.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery17.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery18.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery19.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery20.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery21.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery22.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery23.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery24.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery25.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery26.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery27.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery28.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery29.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery30.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery31.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery32.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery33.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery34.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery35.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery36.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery37.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery38.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery39.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery40.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery41.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery42.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery43.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery44.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery45.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery46.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery47.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery48.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery49.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery50.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery51.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery52.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery53.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery54.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery55.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery56.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery57.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery58.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery59.jpg" class="photo-gallery-img m-2 p-1">
-                    <img src="images/photo-gallery60.jpg" class="photo-gallery-img m-2 p-1">
-                </div>
-            </div>
-        </div>
+      </footer>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
 
 
-    <script>
+    <!-- Venue End -->
 
-        function showHome() 
-        {
-            $("#quiz").hide();
-            $("#feed").show();
-            $("#photo-gallery").hide();
-        }
+  </div>
 
-        function showQuizes(quiz_no) 
-        {
-            if (quiz_no == 1) 
-            {
-                $("#quiz").show();
+  <!-- <footer style="">
+    <center>
+      Designed By Yash Jobalia - 9769264884
+    </center>
+  </footer> -->
 
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
+  <!-- Optional JavaScript; choose one of the two! -->
 
-                $("#quiz-1").show();
-                $("#quiz-2").hide();
-                $("#quiz-3").hide();
-                $("#quiz-4").hide();
-                $("#quiz-5").hide();
-                $("#quiz-6").hide();
-            }
-            else if (quiz_no == 2) 
-            {
-                $("#quiz").show();
-
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
-
-                $("#quiz-1").hide();
-                $("#quiz-2").show();
-                $("#quiz-3").hide();
-                $("#quiz-4").hide();
-                $("#quiz-5").hide();
-                $("#quiz-6").hide();
-            }
-            else if (quiz_no == 3) 
-            {
-                $("#quiz").show();
-
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
-
-                $("#quiz-1").hide();
-                $("#quiz-2").hide();
-                $("#quiz-3").show();
-                $("#quiz-4").hide();
-                $("#quiz-5").hide();
-                $("#quiz-6").hide();
-            }
-            else if (quiz_no == 4) 
-            {
-                $("#quiz").show();
-
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
-
-                $("#quiz-1").hide();
-                $("#quiz-2").hide();
-                $("#quiz-3").hide();
-                $("#quiz-4").show();
-                $("#quiz-5").hide();
-                $("#quiz-6").hide();
-            }
-            else if (quiz_no == 5) 
-            {
-                $("#quiz").show();
-
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
-
-                $("#quiz-1").hide();
-                $("#quiz-2").hide();
-                $("#quiz-3").hide();
-                $("#quiz-4").hide();
-                $("#quiz-5").show();
-                $("#quiz-6").hide();
-            }
-            else if (quiz_no == 6) 
-            {
-                $("#quiz").show();
-
-                $("#post-quiz-1").hide();
-                $("#post-quiz-2").hide();
-                $("#post-quiz-3").hide();
-                $("#post-quiz-4").hide();
-                $("#post-quiz-5").hide();
-                $("#post-quiz-6").hide();
-
-                $("#quiz-1").hide();
-                $("#quiz-2").hide();
-                $("#quiz-3").hide();
-                $("#quiz-4").hide();
-                $("#quiz-5").hide();
-                $("#quiz-6").show();
-            }
-        }
-
-        function showPhotoGallery()
-        {
-            $("#feed").hide();
-            $("#quiz").hide();
-            $("#photo-gallery").show();
-        }
-
-        function showQuiz() 
-        {
-            $("#feed").hide();
-            $("#photo-gallery").hide();
-            $("#post-quiz-1").hide();
-            $("#post-quiz-2").hide();
-            $("#post-quiz-3").hide();
-            $("#post-quiz-4").hide();
-            $("#post-quiz-5").hide();
-            $("#post-quiz-6").hide();
-            showQuizes(1);
-        }
-
-        function checkQuiz(quiz_no) 
-        {
-            if (quiz_no == 1) 
-            {
-                answer = "KAVITA"
-
-                var input_answer = document.getElementById("quiz_text-box1");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    console.log(answer);
-                    $("#quiz-1").hide();
-                    //showQuizes(2);
-                    $("#post-quiz-1").show();
-                    $("#post-quiz-2").hide();
-                    $("#post-quiz-3").hide();
-                    $("#post-quiz-4").hide();
-                    $("#post-quiz-5").hide();
-                    $("#post-quiz-6").hide();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-            else if (quiz_no == 2) 
-            {
-                answer = "KARTISH"
-
-                var input_answer = document.getElementById("quiz_text-box2");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    $("#quiz-2").hide();
-                    $("#post-quiz-1").hide();
-                    $("#post-quiz-2").show();
-                    $("#post-quiz-3").hide();
-                    $("#post-quiz-4").hide();
-                    $("#post-quiz-5").hide();
-                    $("#post-quiz-6").hide();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-            else if (quiz_no == 3) 
-            {
-                answer = "SAMIKSHA"
-
-                var input_answer = document.getElementById("quiz_text-box3");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    $("#quiz-3").hide();
-                    $("#post-quiz-1").hide();
-                    $("#post-quiz-2").hide();
-                    $("#post-quiz-3").show();
-                    $("#post-quiz-4").hide();
-                    $("#post-quiz-5").hide();
-                    $("#post-quiz-6").hide();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-            else if (quiz_no == 4) 
-            {
-                answer = "RHISHABH"
-
-                var input_answer = document.getElementById("quiz_text-box4");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    $("#quiz-4").hide();
-                    $("#post-quiz-1").hide();
-                    $("#post-quiz-2").hide();
-                    $("#post-quiz-3").hide();
-                    $("#post-quiz-4").show();
-                    $("#post-quiz-5").hide();
-                    $("#post-quiz-6").hide();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-            else if (quiz_no == 5) 
-            {
-                answer = "KENA"
-
-                var input_answer = document.getElementById("quiz_text-box5");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    $("#quiz-5").hide();
-                    $("#post-quiz-1").hide();
-                    $("#post-quiz-2").hide();
-                    $("#post-quiz-3").hide();
-                    $("#post-quiz-4").hide();
-                    $("#post-quiz-5").show();
-                    $("#post-quiz-6").hide();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-            else if (quiz_no == 6) 
-            {
-                answer = "SAURABH"
-
-                var input_answer = document.getElementById("quiz_text-box6");
-                input_answer.value = input_answer.value.toUpperCase();
-
-                if (input_answer.value == answer) 
-                {
-                    $("#quiz-6").hide();
-                    $("#post-quiz-1").hide();
-                    $("#post-quiz-2").hide();
-                    $("#post-quiz-3").hide();
-                    $("#post-quiz-4").hide();
-                    $("#post-quiz-5").hide();
-                    $("#post-quiz-6").show();
-                }
-                else
-                {
-                    alert("Wrong Answer");
-                }
-            }
-        }
-
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
 
-    <script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
 
-        //$('#navigation-bar').hide();
-        //$('#notification-bar').hide();
-        //$('#message-bar').hide();
-        //$('#main-content').hide();
 
-        showHome();
 
-    </script>
+  <script>
 
+    $(".bulb-container").hide();
+    $(".bulbs").hide();
+    $(".balloon-panel").hide();
+    $("#photo-slideshow").hide();
+    $(".message").hide();
+
+    function startAudio() {
+      alert("Hello");
+      let audio = document.getElementById("background-audio");
+      audio.play();
+    }
+
+    function showHome() {
+      $("#start-btns-div").hide();
+
+      let body = document.getElementById("body-init");
+      body.classList.add("body-active");
+
+      $(".bulb-container").show();
+      $(".bulbs").show();
+      $(".balloon-panel").show();
+      $("#photo-slideshow").show();
+      $(".message").show();
+      let audio = document.getElementById("background-audio");
+      audio.play();
+    }
+
+  </script>
 
 </body>
 
